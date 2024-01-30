@@ -6,7 +6,7 @@ function handleSubmitMessageForm(event) {
   const formData = new FormData(messageForm);
   const message = formData.get("message");
   const name = formData.get("name");
-  console.log("message", message, "Name", name);
+  console.log("Name received:", name, "message received:", message);
 
   fetch("http://localhost:3000/messages", {
     method: "POST",
